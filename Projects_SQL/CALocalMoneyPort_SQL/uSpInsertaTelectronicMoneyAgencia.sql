@@ -1,0 +1,126 @@
+    
+      
+/* Script Creados Por CreacionScript .net C# Juan Rodriguez */                      
+CREATE PROCEDURE uSpInsertaTelectronicMoneyAgencia                                        
+/*                          
+  Creado Por Juan Rodriguez V18112350                           
+   WsItalCambio   20/01/2014                          
+*/                          
+@sendProviderAcronym as varchar(5),                                        
+@IdSender as varchar(30),                                        
+@FirstNameSender as varchar(40),                                        
+@SecondNameSender as varchar(40),                                        
+@LastNameSender as varchar(40),                                        
+@SecondLastNamerSender as varchar(40),                                        
+@IdBeneficiary as varchar(30),                                        
+@FirstNameBeneficiary as varchar(40),                                        
+@SecondNameBeneficiary as varchar(40),                                        
+@LastNameBeneficiary as varchar(40),                                        
+@SecondLastNameBeneficiary as varchar(40),                                        
+@AddressBeneficiary as varchar(100),                                        
+@CityBeneficiary as varchar(100),                                        
+@Amount as money,                                        
+@Country as varchar(50),                                        
+@PhoneBeneficiary as varchar(15),                                        
+@KeySender as varchar(30),                                        
+@IdCompany as VARCHAR(5),                                        
+@IdProvider as int ,                                              
+@pai_iso3 as varchar(5) ,                                    
+@paymenttype as varchar(3) ,                                    
+@bankName as varchar(100) ,                                    
+@bankAddress as varchar(250) ,                                    
+@bankCode as varchar(10) ,                                    
+@phone as varchar(50) ,                                    
+@sGroupBranchCode as varchar(20) ,                                    
+@sCurrencyPayCode as varchar(10) ,                                    
+@sBranchCodePay as varchar(10) ,                                    
+@currencyCode as varchar(5) ,                                    
+@currency as varchar(50) ,                                    
+@typeAccount as varchar(5) ,                                    
+@accountNumber as varchar(100) ,                                    
+@idRegion as varchar(5) ,                                    
+@aba as varchar(20) ,                                    
+@swift as varchar(20) ,                                    
+@iban as varchar(40) ,                                    
+@idAgency as varchar(10) ,                                    
+@agency as varchar(200) ,                                    
+@institutionNumber as int ,                                    
+@officeNumber as varchar(30),                                     
+@Fixing as money,                          
+@exchangeRateApplied as money,                    
+@PaymentStatus as varchar(1),                  
+@receiptProviderAcronym VARCHAR(5),              
+@currencyPayment VARCHAR(5),           
+@emailBeneficiary VARCHAR(60),        
+@sendIdAgency VARCHAR(10)                                        
+AS                                        
+declare @result int                                                    
+set @result=0                                      
+            
+if not exists (select * from tReceiptElectronicMoney where KeySender=@KeySender and PaymentStatus='V')                                     
+begin                                
+  INSERT INTO tReceiptElectronicMoney(sendProviderAcronym ,IdSender ,FirstNameSender ,SecondNameSender ,                                        
+  LastNameSender ,SecondLastNamerSender ,IdBeneficiary ,FirstNameBeneficiary ,SecondNameBeneficiary ,             
+  LastNameBeneficiary ,SecondLastNameBeneficiary ,AddressBeneficiary ,CityBeneficiary ,Amount ,Country ,         
+  PhoneBeneficiary ,KeySender,IdCompany,PaymentStatus ,PaymentDate ,SendDate  ,IdProvider,pai_iso3,       
+  paymenttype,bankName,bankAddress,bankCode,phone,sGroupBranchCode,sCurrencyPayCode,sBranchCodePay,currencyCode,                              
+  currency,typeAccount,accountNumber,idRegion,aba,swift,iban,idAgency,agency,institutionNumber,officeNumber,                          
+  Fixing,exchangeRateApplied,receiptProviderAcronym,currencyPayment,emailBeneficiary,sendIdAgency,operation,finalOperation                                    
+   ) values(                                        
+  @sendProviderAcronym ,                              
+  @IdSender ,                                        
+  @FirstNameSender ,                                        
+  @SecondNameSender ,                                        
+  @LastNameSender ,                                        
+  @SecondLastNamerSender ,                                        
+  @IdBeneficiary ,                                        
+  @FirstNameBeneficiary ,                                        
+  @SecondNameBeneficiary ,                                        
+  @LastNameBeneficiary ,                   
+  @SecondLastNameBeneficiary ,                                        
+  @AddressBeneficiary ,                                        
+  @CityBeneficiary ,                                        
+  @Amount ,                                        
+  @Country ,                                        
+  @PhoneBeneficiary ,                                        
+  @KeySender ,            
+  0,                                                                    
+  @PaymentStatus ,                                        
+  NULL,                                      
+  getdate(),                             
+  @IdProvider,                                    
+  @pai_iso3,                                    
+  @paymenttype,                                    
+  @bankName,                                    
+  @bankAddress,                                    
+  @bankCode,                                 
+  @phone,                                    
+  @sGroupBranchCode,                                    
+  @sCurrencyPayCode,                                    
+  @sBranchCodePay,                                    
+  @currencyCode,                                    
+  @currency,                            
+  @typeAccount,                                    
+  @accountNumber,                                    
+  @idRegion,                                         
+  @aba,                                    
+  @swift,                                    
+  @iban,                                    
+  @idAgency,                                    
+  @agency,                                    
+  @institutionNumber,                                    
+  @officeNumber,                          
+  @Fixing,                          
+  @exchangeRateApplied,                  
+  @receiptProviderAcronym,              
+  @currencyPayment,          
+  @emailBeneficiary,        
+  CONVERT(INT,@sendIdAgency),    
+  null,    
+  null  )                                
+  set @result=1                               
+ END                                
+ ELSE                                        
+       set @result=0              
+ select @result               
+   
