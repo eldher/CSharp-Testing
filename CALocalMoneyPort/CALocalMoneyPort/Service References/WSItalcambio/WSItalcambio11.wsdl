@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://localhost/WSItalcambio.asmx" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://localhost/WSItalcambio.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost/WSItalcambio.asmx">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendMoney">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="t" type="tns:tReceiptElectronicMoney" />
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Credencial" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="tReceiptElectronicMoney">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sendProviderAcronym" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdCompany" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="receiptProviderAcronym" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SendDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PCEnviado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IPEnviado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="paymentDateInCompany" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdSender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstNameSender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SecondNameSender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastNameSender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SecondLastNamerSender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdBeneficiary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstNameBeneficiary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SecondNameBeneficiary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastNameBeneficiary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SecondLastNameBeneficiary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressBeneficiary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CityBeneficiary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneBeneficiary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KeySender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdProvider" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pai_iso3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="paymenttype" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bankName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bankAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sGroupBranchCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sCurrencyPayCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sBranchCodePay" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="currencyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="currency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="typeAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idRegion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="aba" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="swift" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="iban" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idAgency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="institutionNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="officeNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fixing" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="exchangeRateApplied" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux0" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="currencyPayment" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="emailBeneficiary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sendIdAgency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="info" type="tns:Information" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Information">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescripcionEN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="keySender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tasa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idAgency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idProvider" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaOrden" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="horaOrden" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Credencial">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sendProviderAcronym" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="receiptProviderAcronym" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="sendMoneyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sendMoneyResult" type="tns:Information" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listSendMoney">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="t" type="tns:ArrayOfTReceiptElectronicMoney" />
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Credencial" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTReceiptElectronicMoney">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="tReceiptElectronicMoney" nillable="true" type="tns:tReceiptElectronicMoney" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="listSendMoneyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listSendMoneyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getObjectTReceiptElectronicMoney">
+        <s:complexType />
+      </s:element>
+      <s:element name="getObjectTReceiptElectronicMoneyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getObjectTReceiptElectronicMoneyResult" type="tns:tReceiptElectronicMoney" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getObjectInformation">
+        <s:complexType />
+      </s:element>
+      <s:element name="getObjectInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getObjectInformationResult" type="tns:Information" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getObjectCredential">
+        <s:complexType />
+      </s:element>
+      <s:element name="getObjectCredentialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getObjectCredentialResult" type="tns:Credencial" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReadtreciptElectronicMoney">
+        <s:complexType />
+      </s:element>
+      <s:element name="getReadtreciptElectronicMoneyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getReadtreciptElectronicMoneyResult" type="tns:readtreciptElectronicMoney" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="readtreciptElectronicMoney">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nameSender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdBeneficiary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nameBeneficiary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CityBeneficiary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SendDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdProvider" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="info" type="tns:Information" />
+          <s:element minOccurs="0" maxOccurs="1" name="sendProviderAcronym" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sendCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="emailBeneficiary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="phoneBeneficiary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="addressBeneficiary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sendCurrency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="keySender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sendIdAgency" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getObjectDivisa">
+        <s:complexType />
+      </s:element>
+      <s:element name="getObjectDivisaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getObjectDivisaResult" type="tns:Divisa" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Divisa">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigodivisa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="provideracronym" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pai_iso3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombredivisa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tasaventa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tasacompra" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fixing" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="monedalocal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="diferencialtasaventa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="difrenecialtasacompra" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="reguladortasaventa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="reguladortasacompra" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="statusDivisa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="readMoney">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KeySender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Credencial" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="readMoneyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="readMoneyResult" type="tns:readtreciptElectronicMoney" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listReadMoney">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listKeySender" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Credencial" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="listReadMoneyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listReadMoneyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addCurrency">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="d" type="tns:Divisa" />
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Credencial" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addCurrencyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="addCurrencyResult" type="tns:Information" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateCurrency">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="d" type="tns:Divisa" />
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Credencial" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateCurrencyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateCurrencyResult" type="tns:Information" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkCurrency">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pai_iso3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoDivisa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Credencial" />
+            <s:element minOccurs="0" maxOccurs="1" name="providerAcronym" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkCurrencyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkCurrencyResult" type="tns:Divisa" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validateClient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idClient" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Credencial" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validateClientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="validateClientResult" type="tns:Information" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="paymentBatchUpdates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Credencial" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="paymentBatchUpdatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paymentBatchUpdatesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatePaymentDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="t" type="tns:ArrayOfReadtreciptElectronicMoney" />
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Credencial" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfReadtreciptElectronicMoney">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="readtreciptElectronicMoney" nillable="true" type="tns:readtreciptElectronicMoney" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="updatePaymentDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updatePaymentDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listInformationKeys">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idClient" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idBeneficiary" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sendProviderAcronym" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Credencial" />
+            <s:element minOccurs="0" maxOccurs="1" name="receiptProviderAcronym" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listInformationKeysResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listInformationKeysResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateShippingStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Credencial" />
+            <s:element minOccurs="0" maxOccurs="1" name="keySender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sendProviderAcronym" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateShippingStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateShippingStatusResult" type="tns:Information" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="readTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KeySender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Credencial" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="readTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="readTransactionResult" type="tns:tReceiptElectronicMoney" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendMoneySoapIn">
+    <wsdl:part name="parameters" element="tns:sendMoney" />
+  </wsdl:message>
+  <wsdl:message name="sendMoneySoapOut">
+    <wsdl:part name="parameters" element="tns:sendMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="listSendMoneySoapIn">
+    <wsdl:part name="parameters" element="tns:listSendMoney" />
+  </wsdl:message>
+  <wsdl:message name="listSendMoneySoapOut">
+    <wsdl:part name="parameters" element="tns:listSendMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="getObjectTReceiptElectronicMoneySoapIn">
+    <wsdl:part name="parameters" element="tns:getObjectTReceiptElectronicMoney" />
+  </wsdl:message>
+  <wsdl:message name="getObjectTReceiptElectronicMoneySoapOut">
+    <wsdl:part name="parameters" element="tns:getObjectTReceiptElectronicMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="getObjectInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:getObjectInformation" />
+  </wsdl:message>
+  <wsdl:message name="getObjectInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:getObjectInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="getObjectCredentialSoapIn">
+    <wsdl:part name="parameters" element="tns:getObjectCredential" />
+  </wsdl:message>
+  <wsdl:message name="getObjectCredentialSoapOut">
+    <wsdl:part name="parameters" element="tns:getObjectCredentialResponse" />
+  </wsdl:message>
+  <wsdl:message name="getReadtreciptElectronicMoneySoapIn">
+    <wsdl:part name="parameters" element="tns:getReadtreciptElectronicMoney" />
+  </wsdl:message>
+  <wsdl:message name="getReadtreciptElectronicMoneySoapOut">
+    <wsdl:part name="parameters" element="tns:getReadtreciptElectronicMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="getObjectDivisaSoapIn">
+    <wsdl:part name="parameters" element="tns:getObjectDivisa" />
+  </wsdl:message>
+  <wsdl:message name="getObjectDivisaSoapOut">
+    <wsdl:part name="parameters" element="tns:getObjectDivisaResponse" />
+  </wsdl:message>
+  <wsdl:message name="readMoneySoapIn">
+    <wsdl:part name="parameters" element="tns:readMoney" />
+  </wsdl:message>
+  <wsdl:message name="readMoneySoapOut">
+    <wsdl:part name="parameters" element="tns:readMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="listReadMoneySoapIn">
+    <wsdl:part name="parameters" element="tns:listReadMoney" />
+  </wsdl:message>
+  <wsdl:message name="listReadMoneySoapOut">
+    <wsdl:part name="parameters" element="tns:listReadMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="addCurrencySoapIn">
+    <wsdl:part name="parameters" element="tns:addCurrency" />
+  </wsdl:message>
+  <wsdl:message name="addCurrencySoapOut">
+    <wsdl:part name="parameters" element="tns:addCurrencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateCurrencySoapIn">
+    <wsdl:part name="parameters" element="tns:updateCurrency" />
+  </wsdl:message>
+  <wsdl:message name="updateCurrencySoapOut">
+    <wsdl:part name="parameters" element="tns:updateCurrencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkCurrencySoapIn">
+    <wsdl:part name="parameters" element="tns:checkCurrency" />
+  </wsdl:message>
+  <wsdl:message name="checkCurrencySoapOut">
+    <wsdl:part name="parameters" element="tns:checkCurrencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="validateClientSoapIn">
+    <wsdl:part name="parameters" element="tns:validateClient" />
+  </wsdl:message>
+  <wsdl:message name="validateClientSoapOut">
+    <wsdl:part name="parameters" element="tns:validateClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="paymentBatchUpdatesSoapIn">
+    <wsdl:part name="parameters" element="tns:paymentBatchUpdates" />
+  </wsdl:message>
+  <wsdl:message name="paymentBatchUpdatesSoapOut">
+    <wsdl:part name="parameters" element="tns:paymentBatchUpdatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatePaymentDateSoapIn">
+    <wsdl:part name="parameters" element="tns:updatePaymentDate" />
+  </wsdl:message>
+  <wsdl:message name="updatePaymentDateSoapOut">
+    <wsdl:part name="parameters" element="tns:updatePaymentDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="listInformationKeysSoapIn">
+    <wsdl:part name="parameters" element="tns:listInformationKeys" />
+  </wsdl:message>
+  <wsdl:message name="listInformationKeysSoapOut">
+    <wsdl:part name="parameters" element="tns:listInformationKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateShippingStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:updateShippingStatus" />
+  </wsdl:message>
+  <wsdl:message name="updateShippingStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:updateShippingStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="readTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:readTransaction" />
+  </wsdl:message>
+  <wsdl:message name="readTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:readTransactionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSItalcambioSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Welcome to the Service !</wsdl:documentation>
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendMoney">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method used for insertion of turns</wsdl:documentation>
+      <wsdl:input message="tns:sendMoneySoapIn" />
+      <wsdl:output message="tns:sendMoneySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listSendMoney">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method used to add a list of turns for country and providerAcronym</wsdl:documentation>
+      <wsdl:input message="tns:listSendMoneySoapIn" />
+      <wsdl:output message="tns:listSendMoneySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getObjectTReceiptElectronicMoney">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method that creates a new object of tReceiptElectronicMoney</wsdl:documentation>
+      <wsdl:input message="tns:getObjectTReceiptElectronicMoneySoapIn" />
+      <wsdl:output message="tns:getObjectTReceiptElectronicMoneySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getObjectInformation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method that creates a new object of Information</wsdl:documentation>
+      <wsdl:input message="tns:getObjectInformationSoapIn" />
+      <wsdl:output message="tns:getObjectInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getObjectCredential">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method that creates a new object of Credencial</wsdl:documentation>
+      <wsdl:input message="tns:getObjectCredentialSoapIn" />
+      <wsdl:output message="tns:getObjectCredentialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getReadtreciptElectronicMoney">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method that creates a new object of readtreciptElectronicMoney</wsdl:documentation>
+      <wsdl:input message="tns:getReadtreciptElectronicMoneySoapIn" />
+      <wsdl:output message="tns:getReadtreciptElectronicMoneySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getObjectDivisa">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method that creates a new object of Divisa</wsdl:documentation>
+      <wsdl:input message="tns:getObjectDivisaSoapIn" />
+      <wsdl:output message="tns:getObjectDivisaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="readMoney">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check the status of the money, according to their key</wsdl:documentation>
+      <wsdl:input message="tns:readMoneySoapIn" />
+      <wsdl:output message="tns:readMoneySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listReadMoney">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check the condition of the money, according to key listing</wsdl:documentation>
+      <wsdl:input message="tns:listReadMoneySoapIn" />
+      <wsdl:output message="tns:listReadMoneySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addCurrency">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add the price of the currency</wsdl:documentation>
+      <wsdl:input message="tns:addCurrencySoapIn" />
+      <wsdl:output message="tns:addCurrencySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCurrency">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Modify the price of the currency</wsdl:documentation>
+      <wsdl:input message="tns:updateCurrencySoapIn" />
+      <wsdl:output message="tns:updateCurrencySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkCurrency">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check the currency</wsdl:documentation>
+      <wsdl:input message="tns:checkCurrencySoapIn" />
+      <wsdl:output message="tns:checkCurrencySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validateClient">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validates if a customer is overdrawn</wsdl:documentation>
+      <wsdl:input message="tns:validateClientSoapIn" />
+      <wsdl:output message="tns:validateClientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="paymentBatchUpdates">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates the status of the payment batch</wsdl:documentation>
+      <wsdl:input message="tns:paymentBatchUpdatesSoapIn" />
+      <wsdl:output message="tns:paymentBatchUpdatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePaymentDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update Payment Dates in central repository</wsdl:documentation>
+      <wsdl:input message="tns:updatePaymentDateSoapIn" />
+      <wsdl:output message="tns:updatePaymentDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listInformationKeys">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provider List For Shipping &amp; Receiving, Sender and Recipient</wsdl:documentation>
+      <wsdl:input message="tns:listInformationKeysSoapIn" />
+      <wsdl:output message="tns:listInformationKeysSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateShippingStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update the shipping status</wsdl:documentation>
+      <wsdl:input message="tns:updateShippingStatusSoapIn" />
+      <wsdl:output message="tns:updateShippingStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="readTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check the status of the money, according to their key</wsdl:documentation>
+      <wsdl:input message="tns:readTransactionSoapIn" />
+      <wsdl:output message="tns:readTransactionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSItalcambioSoap" type="tns:WSItalcambioSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMoney">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/sendMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listSendMoney">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/listSendMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectTReceiptElectronicMoney">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/getObjectTReceiptElectronicMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectInformation">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/getObjectInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectCredential">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/getObjectCredential" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReadtreciptElectronicMoney">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/getReadtreciptElectronicMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectDivisa">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/getObjectDivisa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readMoney">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/readMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listReadMoney">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/listReadMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCurrency">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/addCurrency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCurrency">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/updateCurrency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCurrency">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/checkCurrency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateClient">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/validateClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="paymentBatchUpdates">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/paymentBatchUpdates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePaymentDate">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/updatePaymentDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listInformationKeys">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/listInformationKeys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateShippingStatus">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/updateShippingStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readTransaction">
+      <soap:operation soapAction="http://localhost/WSItalcambio.asmx/readTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSItalcambioSoap12" type="tns:WSItalcambioSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMoney">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/sendMoney" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listSendMoney">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/listSendMoney" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectTReceiptElectronicMoney">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/getObjectTReceiptElectronicMoney" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectInformation">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/getObjectInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectCredential">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/getObjectCredential" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReadtreciptElectronicMoney">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/getReadtreciptElectronicMoney" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectDivisa">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/getObjectDivisa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readMoney">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/readMoney" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listReadMoney">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/listReadMoney" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCurrency">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/addCurrency" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCurrency">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/updateCurrency" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCurrency">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/checkCurrency" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateClient">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/validateClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="paymentBatchUpdates">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/paymentBatchUpdates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePaymentDate">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/updatePaymentDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listInformationKeys">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/listInformationKeys" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateShippingStatus">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/updateShippingStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readTransaction">
+      <soap12:operation soapAction="http://localhost/WSItalcambio.asmx/readTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSItalcambio">
+    <wsdl:port name="WSItalcambioSoap" binding="tns:WSItalcambioSoap">
+      <soap:address location="http://gisrvnetprueba1:40/WSItalcambio.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSItalcambioSoap12" binding="tns:WSItalcambioSoap12">
+      <soap12:address location="http://gisrvnetprueba1:40/WSItalcambio.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

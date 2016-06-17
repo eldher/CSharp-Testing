@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://localhost:56854/WSOIBCV.asmx" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://localhost:56854/WSOIBCV.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost:56854/WSOIBCV.asmx">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VENTADIV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="COTIMOVIMIENTO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COCLIENTE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NBCLIENTE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MOBASE" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="TSCAMBIO" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="COUCTATRANS" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MOTRANS" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="COMOTIVOOPERACION" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="COINTRUM" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VENTADIVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VENTADIVResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="COMPRADIV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="COTIMOVIMIENTO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COCLIENTE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NBCLIENTE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MOBASE" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="TSCAMBIO" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="COUCTATRANS" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MOTRANS" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="COMOTIVOOPERACION" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="COINTRUM" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="COMPRADIVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="COMPRADIVResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TIPOSMOVIMIENTOS">
+        <s:complexType />
+      </s:element>
+      <s:element name="TIPOSMOVIMIENTOSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TIPOSMOVIMIENTOSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MOVIMIENTOS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MOVIMIENTOSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MOVIMIENTOSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MOTIVOS">
+        <s:complexType />
+      </s:element>
+      <s:element name="MOTIVOSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MOTIVOSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EXCEPCIONES">
+        <s:complexType />
+      </s:element>
+      <s:element name="EXCEPCIONESResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EXCEPCIONESResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="VENTADIVSoapIn">
+    <wsdl:part name="parameters" element="tns:VENTADIV" />
+  </wsdl:message>
+  <wsdl:message name="VENTADIVSoapOut">
+    <wsdl:part name="parameters" element="tns:VENTADIVResponse" />
+  </wsdl:message>
+  <wsdl:message name="COMPRADIVSoapIn">
+    <wsdl:part name="parameters" element="tns:COMPRADIV" />
+  </wsdl:message>
+  <wsdl:message name="COMPRADIVSoapOut">
+    <wsdl:part name="parameters" element="tns:COMPRADIVResponse" />
+  </wsdl:message>
+  <wsdl:message name="TIPOSMOVIMIENTOSSoapIn">
+    <wsdl:part name="parameters" element="tns:TIPOSMOVIMIENTOS" />
+  </wsdl:message>
+  <wsdl:message name="TIPOSMOVIMIENTOSSoapOut">
+    <wsdl:part name="parameters" element="tns:TIPOSMOVIMIENTOSResponse" />
+  </wsdl:message>
+  <wsdl:message name="MOVIMIENTOSSoapIn">
+    <wsdl:part name="parameters" element="tns:MOVIMIENTOS" />
+  </wsdl:message>
+  <wsdl:message name="MOVIMIENTOSSoapOut">
+    <wsdl:part name="parameters" element="tns:MOVIMIENTOSResponse" />
+  </wsdl:message>
+  <wsdl:message name="MOTIVOSSoapIn">
+    <wsdl:part name="parameters" element="tns:MOTIVOS" />
+  </wsdl:message>
+  <wsdl:message name="MOTIVOSSoapOut">
+    <wsdl:part name="parameters" element="tns:MOTIVOSResponse" />
+  </wsdl:message>
+  <wsdl:message name="EXCEPCIONESSoapIn">
+    <wsdl:part name="parameters" element="tns:EXCEPCIONES" />
+  </wsdl:message>
+  <wsdl:message name="EXCEPCIONESSoapOut">
+    <wsdl:part name="parameters" element="tns:EXCEPCIONESResponse" />
+  </wsdl:message>
+  <wsdl:portType name="autBCVSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Bienvenida al Servicio</wsdl:documentation>
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VENTADIV">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna operacion de autorizacion de venta de BCV</wsdl:documentation>
+      <wsdl:input message="tns:VENTADIVSoapIn" />
+      <wsdl:output message="tns:VENTADIVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="COMPRADIV">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Retorna operacion de autorizacion de compra de BCV</wsdl:documentation>
+      <wsdl:input message="tns:COMPRADIVSoapIn" />
+      <wsdl:output message="tns:COMPRADIVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TIPOSMOVIMIENTOS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Retorna Tipos de Movimientos por casa de cambio </wsdl:documentation>
+      <wsdl:input message="tns:TIPOSMOVIMIENTOSSoapIn" />
+      <wsdl:output message="tns:TIPOSMOVIMIENTOSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MOVIMIENTOS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Retorna los Movimientos realizados por casa de cambio por fecha</wsdl:documentation>
+      <wsdl:input message="tns:MOVIMIENTOSSoapIn" />
+      <wsdl:output message="tns:MOVIMIENTOSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MOTIVOS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Retorna los Motivos de compra o venta para las casa de cambio</wsdl:documentation>
+      <wsdl:input message="tns:MOTIVOSSoapIn" />
+      <wsdl:output message="tns:MOTIVOSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EXCEPCIONES">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna lista de causas de Excepciones del Servicio</wsdl:documentation>
+      <wsdl:input message="tns:EXCEPCIONESSoapIn" />
+      <wsdl:output message="tns:EXCEPCIONESSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="autBCVSoap" type="tns:autBCVSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://localhost:56854/WSOIBCV.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VENTADIV">
+      <soap:operation soapAction="http://localhost:56854/WSOIBCV.asmx/VENTADIV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="COMPRADIV">
+      <soap:operation soapAction="http://localhost:56854/WSOIBCV.asmx/COMPRADIV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TIPOSMOVIMIENTOS">
+      <soap:operation soapAction="http://localhost:56854/WSOIBCV.asmx/TIPOSMOVIMIENTOS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MOVIMIENTOS">
+      <soap:operation soapAction="http://localhost:56854/WSOIBCV.asmx/MOVIMIENTOS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MOTIVOS">
+      <soap:operation soapAction="http://localhost:56854/WSOIBCV.asmx/MOTIVOS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EXCEPCIONES">
+      <soap:operation soapAction="http://localhost:56854/WSOIBCV.asmx/EXCEPCIONES" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="autBCVSoap12" type="tns:autBCVSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://localhost:56854/WSOIBCV.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VENTADIV">
+      <soap12:operation soapAction="http://localhost:56854/WSOIBCV.asmx/VENTADIV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="COMPRADIV">
+      <soap12:operation soapAction="http://localhost:56854/WSOIBCV.asmx/COMPRADIV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TIPOSMOVIMIENTOS">
+      <soap12:operation soapAction="http://localhost:56854/WSOIBCV.asmx/TIPOSMOVIMIENTOS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MOVIMIENTOS">
+      <soap12:operation soapAction="http://localhost:56854/WSOIBCV.asmx/MOVIMIENTOS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MOTIVOS">
+      <soap12:operation soapAction="http://localhost:56854/WSOIBCV.asmx/MOTIVOS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EXCEPCIONES">
+      <soap12:operation soapAction="http://localhost:56854/WSOIBCV.asmx/EXCEPCIONES" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="autBCV">
+    <wsdl:port name="autBCVSoap" binding="tns:autBCVSoap">
+      <soap:address location="http://gisrvnetprueba1/WSOIBCV/WSOIBCV.asmx" />
+    </wsdl:port>
+    <wsdl:port name="autBCVSoap12" binding="tns:autBCVSoap12">
+      <soap12:address location="http://gisrvnetprueba1/WSOIBCV/WSOIBCV.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

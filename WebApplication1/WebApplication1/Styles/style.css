@@ -1,0 +1,461 @@
+body
+{
+    padding:0 0 0 0;
+    margin:0 0 0 0;
+    font-family:Verdana;    
+}
+
+a {  color: #5488BF;}
+
+#header_logo
+{
+    background-image:url(../home/img/bbva-logo-slim.jpg);    
+    width: 100%;
+    height: 65px;
+    background-repeat:no-repeat;   
+}
+
+
+.header_links
+{
+    display:none;
+    position:relative;
+    bottom:0px;
+    right:0px;
+    padding: 0 0 0 0;
+    margin-top: 20px;
+    float:right;
+    width:120px;
+    height:20px;
+    border:1px solid black;
+    }
+
+
+.header_links a
+{
+    position:inherit;
+    bottom:0px;
+    left:0px;
+    font-size:12px;
+}
+
+
+.main_wrapper
+{
+    margin-left:20px;
+    width:1200px;
+    height:530px;    
+    /*border:1px solid black;*/
+    }
+
+
+
+/*--------------- Barra de Navegacion ----------------*/
+
+.barra-navegacion
+{
+    width:100%;
+    height: 40px;
+    font-size:12px;    
+}
+
+.barra-navegacion ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(#009ee5, #009ee5);    
+}
+
+.barra-navegacion li 
+{
+    float: left;
+    border-right: 1px solid #EDEDED;
+    height:39px;
+}
+
+.barra-navegacion li:last-child {
+    border-right: none;
+}
+
+.barra-navegacion li a {
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+}
+
+
+.barra-navegacion li a:hover {
+    background-color: #DEDEDE;
+    color: #2655AD;
+    list-style-type: none;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.barra-navegacion .construccion a
+{
+    background-color: #b5e5f9;
+}
+
+  
+
+
+.busquedas
+{
+    display:inline;
+    margin-top:5px;
+    float:left;
+    width:100%;
+    height:55px;
+    /*border:1px solid black;*/
+    font-size:12px;
+}
+
+   
+.busquedas input  
+{
+    width:150px;
+    height:40px;
+    float:left;
+    margin-right:10px;
+    color: #636466;
+    border-radius: 3px;
+    padding-left:5px;
+    background: #fff;
+    border: 1px solid #c6c7cc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);    
+    
+    }   
+
+.busquedas input:focus{ background:#EDF8FF;}
+
+.busquedas input[type="submit"]:hover{
+    border: 1px solid #999;color:#000;
+    background-color:#4D7AC9;
+    color:White;
+}
+
+
+#importar-cubos
+{
+    display:block;
+    margin-top:10px;
+    width:180px;
+    height:200px;
+    float:right;
+    border:1px solid black;
+    }
+
+#importar-cubos input{
+    margin-top:2px;
+    float:left;
+    width:150px;
+    }
+
+
+/*--------------- Datos Principales Header  ----------------*/
+
+
+#contenedor-superior
+{
+    width:100%;
+    height:110px;      
+    }
+
+.info_container
+{
+    float:left;
+    height: 90px;
+    width:380px;
+    margin-top:8px;
+    margin-left:20px;    
+}
+
+div.info_head  > *
+{    
+    display:inline; 
+    font-size:11px;    
+    float:left;
+}
+
+div.info_head > span{   
+    margin-top:4px; 
+    width:110px;
+    height:15px;
+}
+
+div.info_head > input{    
+
+    width:250px;
+    height:15px;
+}
+
+
+
+
+/*---------------------- Tablas que muestra Disposiciones -----------------------------------------*/ 
+
+
+.table-header
+{   
+    /*margin-left:20px; */
+    padding-top:10px;
+    color:white;
+    font-size:13px;  
+    display:table-cell;      
+    background-color:#52bcec;
+    height:28px;
+    text-align:center;
+    border-radius:3px;     
+}
+
+.table-header td  
+{
+    border-right:1px solid white;
+}
+
+.table-header td:last-child 
+{
+    border-right:none;
+    }
+
+
+.central
+{
+    float:left;
+    overflow: auto;
+    font-size:12px;
+}
+
+.central td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; 
+    /*border-right:1px solid #ddd;*/
+}
+
+.central tr
+{
+    height:20px;}
+
+.central tr:hover {background-color: #f5f5f5}
+
+
+#wide { width: 970px; height:440px; }
+#wide table {width: 930px;}
+
+#full { width:840px; height:400px; }
+#full table {width:820px;}
+
+#mid { width:840px; height:250px; }
+#mid table {width:820px;}
+
+
+#ficha { width:970px; height:350px; /* border:1px solid black; */}
+
+#banner{ width:800px; height:80px; /* border:1px solid black; */ padding:20px}
+
+/*--------------- Panel Izquierdo ----------------*/
+
+#panel_izq
+{
+    position:absolute;
+    top:214px;
+    right:145px;
+    float:left;
+    width:350px;
+    height:400px;
+    margin-left:15px;    
+  /*  border: 1px solid black;*/
+}
+
+
+.sub_panel_izq h1
+{    
+    width:313px;   
+    color:white;
+    font-size:13px;  
+    display:table-cell; 
+    vertical-align:middle;
+    background-color:#52bcec;
+    height:39px;
+    text-align:center;
+    border-radius:3px;
+}
+
+
+div.sub_panel_izq > span
+{   
+    width:160px; 
+    font-size:12px;    
+    float:left;
+    margin:7px 0px 2px 0px;
+}
+
+div.sub_panel_izq > input
+{    
+    display:inline;
+    width:150px;
+    font-size:12px;        
+    float:left;
+     margin:2px 0px 2px 0px;
+}
+
+    
+div.central h1
+{
+    width:390px;   
+    color:white;
+    font-size:13px;  
+    display:table-cell; 
+    vertical-align:middle;
+    background-color:#52bcec;
+    height:39px;
+    text-align:center;
+    border-radius:3px;
+}
+
+
+/*********************************************/
+
+
+div.central-izq
+{
+    width:47%;
+    float:left;
+    margin-left:20px;
+}
+    
+   
+
+div.central-izq > span{  
+   width:220px; 
+    font-size:12px;    
+    float:left;
+    margin:7px 0px 2px 0px;
+}
+
+div.central-izq > input{    
+    display:inline;
+    width:160px;
+    font-size:12px;        
+    float:left;
+     margin:2px 0px 2px 0px;
+}
+
+
+div.central-der > span{  
+   width:220px; 
+    font-size:12px;    
+    float:left;
+    margin:7px 0px 2px 0px;
+}
+
+div.central-der > input{    
+    display:inline;
+    width:160px;
+    font-size:12px;        
+    float:left;
+     margin:2px 0px 2px 0px;
+}
+
+
+#banner > span 
+{
+    margin:5px 5px 0px 55px;
+   width:150px; 
+    font-size:12px;    
+    float:left;
+    
+}
+
+#banner > input{    
+    display:inline;
+    width:180px;
+    font-size:12px;        
+    float:left;
+}    
+
+
+/******************** FICHA TECNICA ********************/
+    
+.contenedor_ficha_tecnica 
+{
+    float:left;
+    width:1200px;
+    height:400px;
+    margin-left:15px;
+}
+
+
+div.caja_ficha_tecnica
+{
+    float:left;
+    width:375px;
+    height:180px;    
+    margin-bottom:10px;
+    margin-right:25px;
+    }
+
+div.caja_ficha_tecnica h1
+{  
+    width:370px;   
+    height:39px;
+    color:white;
+    font-size:13px;      
+    background-color:#52bcec;    
+    text-align:center;
+    border-radius:3px;
+    display:table-cell; 
+    vertical-align:middle;
+}
+
+
+div.caja_ficha_tecnica > span
+{   
+    width:180px; 
+    font-size:12px;    
+    float:left;
+    margin:7px 0px 2px 0px;
+}
+
+div.caja_ficha_tecnica > input
+{    
+    display:inline;
+    width:150px;
+    font-size:12px;        
+    float:left;
+    margin:2px 0px 2px 0px;
+}
+    
+
+.caja_ficha_tecnica input[type="submit"]{
+    width:150px;
+    height:40px;
+    float:left;
+    margin-right:10px;
+    color: #636466;
+    border-radius: 3px;
+    padding-left:5px;
+    background: #fff;
+    border: 1px solid #c6c7cc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);    
+}
+    
+
+.caja_ficha_tecnica input:focus{ background:#EDF8FF;}
+
+.caja_ficha_tecnica input[type="submit"]:hover
+{
+    
+    
+    border: 1px solid #999;color:#000;
+    background-color:#4D7AC9;
+    color:White;
+}
+

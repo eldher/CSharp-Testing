@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\inetpub\wwwroot\SistemaTurismo" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="home/js/jquery-2.1.1.js" publishTime="04/17/2015 09:19:01" />
+    <file relUrl="home/index_tabbed.html" publishTime="07/09/2015 17:32:19" />
+    <file relUrl="home/Importar_cubos.aspx" publishTime="04/15/2016 11:43:28" />
+    <file relUrl="Global.asax" publishTime="03/20/2015 15:15:17" />
+    <file relUrl="home/img/logoBBVA.png" publishTime="02/01/2016 15:38:14" />
+    <file relUrl="home/ficha_tecnica.aspx" publishTime="04/20/2016 11:29:12" />
+    <file relUrl="home/detalle_linea.aspx" publishTime="04/20/2016 10:21:02" />
+    <file relUrl="home/detalle_contrato.aspx" publishTime="04/20/2016 10:20:42" />
+    <file relUrl="About.aspx" publishTime="03/20/2015 15:15:17" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="03/20/2015 15:15:17" />
+    <file relUrl="home/js/modernizr.js" publishTime="04/17/2015 09:19:01" />
+    <file relUrl="Site.Master" publishTime="04/09/2015 15:52:28" />
+    <file relUrl="home/js/main.js" publishTime="04/17/2015 09:19:01" />
+    <file relUrl="Styles/style.css" publishTime="04/20/2016 16:24:10" />
+    <file relUrl="Account/Web.config" publishTime="03/17/2016 16:10:55" />
+    <file relUrl="Account/Register.aspx" publishTime="03/25/2015 14:46:03" />
+    <file relUrl="Account/Login.aspx" publishTime="03/20/2015 15:15:17" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="03/20/2015 15:15:17" />
+    <file relUrl="home/index.html" publishTime="04/17/2015 09:19:02" />
+    <file relUrl="Styles/reset.css" publishTime="04/17/2015 09:19:02" />
+    <file relUrl="Default.aspx" publishTime="04/08/2015 16:35:38" />
+    <file relUrl="Account/ChangePasswordSuccess.aspx" publishTime="03/20/2015 15:15:17" />
+    <file relUrl="Cuentas/Loguearse.aspx" publishTime="03/14/2016 15:00:09" />
+    <file relUrl="bin/WebApplication1.pdb" publishTime="04/21/2016 08:58:33" />
+    <file relUrl="Cuentas/Registro.aspx" publishTime="03/14/2016 15:06:28" />
+    <file relUrl="bin/WebApplication1.dll" publishTime="04/21/2016 08:58:35" />
+    <file relUrl="Styles/Site.css" publishTime="04/17/2015 09:25:34" />
+    <file relUrl="Styles/Registro.css" publishTime="03/14/2016 15:07:14" />
+    <file relUrl="home/detalle_proyecto.aspx" publishTime="04/20/2016 11:20:05" />
+    <file relUrl="Account/ChangePassword.aspx" publishTime="03/20/2015 15:15:17" />
+    <file relUrl="bin/CLBusinessObjects.dll" publishTime="03/24/2015 09:18:44" />
+    <file relUrl="Web.config" publishTime="03/17/2016 16:47:39" />
+    <file relUrl="CLBusinessObjects.dll" publishTime="03/24/2015 09:18:44" />
+    <file relUrl="Styles/style_tabbed.css" publishTime="04/17/2015 09:19:02" />
+    <file relUrl="img/logo.JPG" publishTime="04/08/2015 16:38:33" />
+    <file relUrl="home/img/bbva-logo-slim.jpg" publishTime="03/03/2016 15:53:25" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="03/20/2015 15:15:17" />
+  </publishProfile>
+</publishData>

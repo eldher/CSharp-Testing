@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="Microsoft.Samples.XmlMessaging.WebServices" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="Microsoft.Samples.XmlMessaging.WebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="Microsoft.Samples.XmlMessaging.WebServices">
+      <s:element name="SendTxn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objParms" type="tns:SendTxnParms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SendTxnParms">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sPrePrintedNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sClavePay" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderName1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderName3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderName4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderPhone1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderPhone2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderCountryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderEmail" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="dSenderDOB" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="sTypeIDSender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sNumIDSender" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="dIssueIDDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="dExpirationIDDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderOcupation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderSSN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSourceFund" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReasonTxn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverName1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverName3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverName4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverPhone1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverPhone2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverCityCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverStateCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverCountryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverZipCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverEmail" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="dReceiverDOB" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="nCurrencyRemiter" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="sModePayCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sCurrencyPayCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sBranchCodePay" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="dAmountPay" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="sAccountNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sTypeAcc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sBankCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sBranchBankCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sCPFNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sApprovalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverName1ForeLang" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverName2ForeLang" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverName3ForeLang" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverName4ForeLang" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverAddressForeLang" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sMessageForeLang" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverTownId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux6" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux7" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux8" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux9" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux10" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sAmountType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sIssuingCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sIssuingState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sRelationshipReceiver" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderEmployerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderEmployerAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderEmployerPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverCompleteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sCardNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sCardCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sExpirationDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sBillToFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sBillToLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sBillToAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sBillToCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sBillToState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sBillToCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sBillToZIP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sTypeCharge" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sCouponCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSenderZipCode" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="SendTxnResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WSTF_PC_Header" type="tns:WSTF_PC_Header" />
+      <s:complexType name="WSTF_PC_Header">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sWebUser" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sWebPassword" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sCompanyID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sSecurityToken" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="WSTF_PC_Header_Out" type="tns:WSTF_PC_Header_Out" />
+      <s:complexType name="WSTF_PC_Header_Out">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="sFlagStatus" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="sErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sErrorDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sPPNResp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sKeyNResp" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetCat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjParms" type="tns:GetCatParms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetCatParms">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sCountryId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sCatType" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetCatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCatResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjParms" type="tns:SendRequestParms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SendRequestParms">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sPrePrintedNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sClavePay" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sTypeRequest" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sNewReceiverName1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sNewReceiverName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sNewReceiverName3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sNewReceiverName4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sNewReceiverAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sNewReceiverPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sNewAccountNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sNewBankName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aux2" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="SendRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendRequestResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePwd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjParms" type="tns:ChangePwdParms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ChangePwdParms">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sNewPassword" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sNewPasswordConfirm" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="ChangePwdResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTFN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjParms" type="tns:GetTFN_Parms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetTFN_Parms">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sGroupBranchCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverCountryCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="iNoClaves" type="s:int" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetTFNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTFNResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjParms" type="tns:GetRate_Parms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetRate_Parms">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sGroupBranchCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sModePayCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sCurrencyPayCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sBankCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverCountryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverCityCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="nCurrencyRemiter" type="s:int" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetRateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetComm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjParms" type="tns:GetComm_Parms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetComm_Parms">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sGroupBranchCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sModePayCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sCurrencyPayCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sBankCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverCountryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverCityCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="nCurrencyRemiter" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="dAmountPay" type="s:decimal" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetCommResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TxnList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjParms" type="tns:TxnList_Parms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TxnList_Parms">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sReceiverCountryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sTypeList" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="dDateFilter" type="s:dateTime" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="TxnListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TxnListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApprTxn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjParms" type="tns:ApprTxnParms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ApprTxnParms">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sPrePrintedNumber" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="ApprTxnResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendTxnSoapIn">
+    <wsdl:part name="parameters" element="tns:SendTxn" />
+  </wsdl:message>
+  <wsdl:message name="SendTxnSoapOut">
+    <wsdl:part name="parameters" element="tns:SendTxnResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendTxnWSTF_PC_Header">
+    <wsdl:part name="WSTF_PC_Header" element="tns:WSTF_PC_Header" />
+  </wsdl:message>
+  <wsdl:message name="SendTxnWSTF_PC_Header_Out">
+    <wsdl:part name="WSTF_PC_Header_Out" element="tns:WSTF_PC_Header_Out" />
+  </wsdl:message>
+  <wsdl:message name="GetCatSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCat" />
+  </wsdl:message>
+  <wsdl:message name="GetCatSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCatResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCatWSTF_PC_Header">
+    <wsdl:part name="WSTF_PC_Header" element="tns:WSTF_PC_Header" />
+  </wsdl:message>
+  <wsdl:message name="GetCatWSTF_PC_Header_Out">
+    <wsdl:part name="WSTF_PC_Header_Out" element="tns:WSTF_PC_Header_Out" />
+  </wsdl:message>
+  <wsdl:message name="SendRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:SendRequest" />
+  </wsdl:message>
+  <wsdl:message name="SendRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:SendRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendRequestWSTF_PC_Header">
+    <wsdl:part name="WSTF_PC_Header" element="tns:WSTF_PC_Header" />
+  </wsdl:message>
+  <wsdl:message name="SendRequestWSTF_PC_Header_Out">
+    <wsdl:part name="WSTF_PC_Header_Out" element="tns:WSTF_PC_Header_Out" />
+  </wsdl:message>
+  <wsdl:message name="ChangePwdSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePwd" />
+  </wsdl:message>
+  <wsdl:message name="ChangePwdSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePwdWSTF_PC_Header">
+    <wsdl:part name="WSTF_PC_Header" element="tns:WSTF_PC_Header" />
+  </wsdl:message>
+  <wsdl:message name="ChangePwdWSTF_PC_Header_Out">
+    <wsdl:part name="WSTF_PC_Header_Out" element="tns:WSTF_PC_Header_Out" />
+  </wsdl:message>
+  <wsdl:message name="GetTFNSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTFN" />
+  </wsdl:message>
+  <wsdl:message name="GetTFNSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTFNResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTFNWSTF_PC_Header">
+    <wsdl:part name="WSTF_PC_Header" element="tns:WSTF_PC_Header" />
+  </wsdl:message>
+  <wsdl:message name="GetTFNWSTF_PC_Header_Out">
+    <wsdl:part name="WSTF_PC_Header_Out" element="tns:WSTF_PC_Header_Out" />
+  </wsdl:message>
+  <wsdl:message name="GetRateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRate" />
+  </wsdl:message>
+  <wsdl:message name="GetRateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRateWSTF_PC_Header">
+    <wsdl:part name="WSTF_PC_Header" element="tns:WSTF_PC_Header" />
+  </wsdl:message>
+  <wsdl:message name="GetRateWSTF_PC_Header_Out">
+    <wsdl:part name="WSTF_PC_Header_Out" element="tns:WSTF_PC_Header_Out" />
+  </wsdl:message>
+  <wsdl:message name="GetCommSoapIn">
+    <wsdl:part name="parameters" element="tns:GetComm" />
+  </wsdl:message>
+  <wsdl:message name="GetCommSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommWSTF_PC_Header">
+    <wsdl:part name="WSTF_PC_Header" element="tns:WSTF_PC_Header" />
+  </wsdl:message>
+  <wsdl:message name="GetCommWSTF_PC_Header_Out">
+    <wsdl:part name="WSTF_PC_Header_Out" element="tns:WSTF_PC_Header_Out" />
+  </wsdl:message>
+  <wsdl:message name="TxnListSoapIn">
+    <wsdl:part name="parameters" element="tns:TxnList" />
+  </wsdl:message>
+  <wsdl:message name="TxnListSoapOut">
+    <wsdl:part name="parameters" element="tns:TxnListResponse" />
+  </wsdl:message>
+  <wsdl:message name="TxnListWSTF_PC_Header">
+    <wsdl:part name="WSTF_PC_Header" element="tns:WSTF_PC_Header" />
+  </wsdl:message>
+  <wsdl:message name="TxnListWSTF_PC_Header_Out">
+    <wsdl:part name="WSTF_PC_Header_Out" element="tns:WSTF_PC_Header_Out" />
+  </wsdl:message>
+  <wsdl:message name="ApprTxnSoapIn">
+    <wsdl:part name="parameters" element="tns:ApprTxn" />
+  </wsdl:message>
+  <wsdl:message name="ApprTxnSoapOut">
+    <wsdl:part name="parameters" element="tns:ApprTxnResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApprTxnWSTF_PC_Header">
+    <wsdl:part name="WSTF_PC_Header" element="tns:WSTF_PC_Header" />
+  </wsdl:message>
+  <wsdl:message name="ApprTxnWSTF_PC_Header_Out">
+    <wsdl:part name="WSTF_PC_Header_Out" element="tns:WSTF_PC_Header_Out" />
+  </wsdl:message>
+  <wsdl:portType name="wstf_PCSoap">
+    <wsdl:operation name="SendTxn">
+      <wsdl:input message="tns:SendTxnSoapIn" />
+      <wsdl:output message="tns:SendTxnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCat">
+      <wsdl:input message="tns:GetCatSoapIn" />
+      <wsdl:output message="tns:GetCatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendRequest">
+      <wsdl:input message="tns:SendRequestSoapIn" />
+      <wsdl:output message="tns:SendRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePwd">
+      <wsdl:input message="tns:ChangePwdSoapIn" />
+      <wsdl:output message="tns:ChangePwdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTFN">
+      <wsdl:input message="tns:GetTFNSoapIn" />
+      <wsdl:output message="tns:GetTFNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRate">
+      <wsdl:input message="tns:GetRateSoapIn" />
+      <wsdl:output message="tns:GetRateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComm">
+      <wsdl:input message="tns:GetCommSoapIn" />
+      <wsdl:output message="tns:GetCommSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TxnList">
+      <wsdl:input message="tns:TxnListSoapIn" />
+      <wsdl:output message="tns:TxnListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApprTxn">
+      <wsdl:input message="tns:ApprTxnSoapIn" />
+      <wsdl:output message="tns:ApprTxnSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wstf_PCSoap" type="tns:wstf_PCSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendTxn">
+      <soap:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/SendTxn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SendTxnWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:SendTxnWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCat">
+      <soap:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/GetCat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCatWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCatWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendRequest">
+      <soap:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/SendRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SendRequestWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:SendRequestWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePwd">
+      <soap:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/ChangePwd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ChangePwdWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ChangePwdWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTFN">
+      <soap:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/GetTFN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetTFNWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetTFNWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRate">
+      <soap:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/GetRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetRateWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetRateWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComm">
+      <soap:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/GetComm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCommWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCommWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TxnList">
+      <soap:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/TxnList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TxnListWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:TxnListWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApprTxn">
+      <soap:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/ApprTxn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ApprTxnWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ApprTxnWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wstf_PCSoap12" type="tns:wstf_PCSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendTxn">
+      <soap12:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/SendTxn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SendTxnWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SendTxnWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCat">
+      <soap12:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/GetCat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCatWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCatWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendRequest">
+      <soap12:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/SendRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SendRequestWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SendRequestWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePwd">
+      <soap12:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/ChangePwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ChangePwdWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ChangePwdWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTFN">
+      <soap12:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/GetTFN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetTFNWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetTFNWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRate">
+      <soap12:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/GetRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetRateWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetRateWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComm">
+      <soap12:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/GetComm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCommWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCommWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TxnList">
+      <soap12:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/TxnList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TxnListWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TxnListWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApprTxn">
+      <soap12:operation soapAction="Microsoft.Samples.XmlMessaging.WebServices/ApprTxn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ApprTxnWSTF_PC_Header" part="WSTF_PC_Header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ApprTxnWSTF_PC_Header_Out" part="WSTF_PC_Header_Out" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wstf_PC">
+    <wsdl:port name="wstf_PCSoap" binding="tns:wstf_PCSoap">
+      <soap:address location="https://wsa.transfastwmt.com/wstf_pc.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wstf_PCSoap12" binding="tns:wstf_PCSoap12">
+      <soap12:address location="https://wsa.transfastwmt.com/wstf_pc.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
